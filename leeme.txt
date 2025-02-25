@@ -1,0 +1,20 @@
+ npm create vite@latest .  // para crear el esqueleto de un proyecto react con vite.
+
+ npm i // para instalar todos los paquetes asociados al archivo package.json 
+       // y crear la carpeta node_modules
+
+npm run dev // para poner a correr el servidor       
+ 
+ - Trabajo con Git
+ git init
+ git add .
+ git log --oneline
+ git commit -m "hasta el 34:Recorrer elementos con map"
+ git branch -M main
+ git push -u origin main  // para actualizar al gitHub
+
+// para subir a github
+ git remote add origin http://github.com/RogerBatistaCaceres/****.git
+ git branch -M main
+ git push -u origin main
+ 
