@@ -14,6 +14,7 @@ npm run dev // para poner a correr el servidor
  git push -u origin main  // para actualizar al gitHub
 
 // para subir a github
+// esta función lo que hace es poner en origin el enlace remoto a github...
  git remote add origin http://github.com/RogerBatistaCaceres/****.git
  git branch -M main
  git push -u origin main
