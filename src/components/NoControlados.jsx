@@ -9,6 +9,7 @@ const NoControlado = () => {
   // interactividad con los elementos de edición, de esta forma
   // podemos decirle en tiempo real si necesita más de x caracteres o si está
   // introduciendo algún caracter no permitido, en tiempo real en la edición.
+  // Los formularios controlados son los formularios preferidos en la actualidad
 
   // La forma de hacer esto antes era, acceder directamente al document
   // y preguntar por el id del formulario
