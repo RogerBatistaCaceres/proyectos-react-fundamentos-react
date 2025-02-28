@@ -18,4 +18,5 @@ npm run dev // para poner a correr el servidor
  git remote add origin http://github.com/RogerBatistaCaceres/****.git
  git branch -M main
  git push -u origin main
+
  
