@@ -1,3 +1,10 @@
+ 
+Curso React y Next.js: Aprende Frontend y Backend FullStack
+ https://www.udemy.com/course/curso-react-js/learn/lecture/35312250#notes
+https://bluuweb.dev/
+https://www.youtube.com/bluuweb
+
+ 
  npm create vite@latest .  // para crear el esqueleto de un proyecto react con vite.
 
  npm i // para instalar todos los paquetes asociados al archivo package.json 
@@ -19,4 +26,8 @@ npm run dev // para poner a correr el servidor
  git branch -M main
  git push -u origin main
 
- 
+ git push --force origin main
+
+
+ instalar sweetalert con npm ..
+ npm install sweetalert2
