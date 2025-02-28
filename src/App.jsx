@@ -6,7 +6,7 @@ import NoControlado from "./components/NoControlados";
 
 const App = () => {
   return (
-    <div classname="container">
+    <div className="container">
       <h1>Formularios</h1>
       <NoControlado />
     </div>
