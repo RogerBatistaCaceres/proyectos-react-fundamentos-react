@@ -27,9 +27,13 @@ const Controlado = () => {
     priority: true,
   }); // importante, ahora es useState como es un objeto se inicializa, como objeto {}
 
+  // Ahora vamos a hacer la desestructuración del objeto "todo", que nos devuelve el useState
+  const { title, description, state, priority } = todo;
+
   const handleSubmit = (e) => {
     e.preventDefault();
-    console.log(todo.title, todo.description, todo.priority, todo.state);
+    // console.log(todo.title, todo.description, todo.priority, todo.state);
+    console.log(title, description, priority, state); // después de la desestructuración
   };
 
   // este evento de ejecuta cuando escribimos en cada elemento ...
@@ -47,14 +51,21 @@ const Controlado = () => {
 
     // setTodo({ ...todo, priority: e.target.checked })
 
+    // Ahora vamos a hacer la desestructuración del objeto "e.target", que viene del evento "e"
+    const { name, type, checked, value } = e.target;
+
     setTodo({
       ...todo,
       // esta linea es para los tipos: text, textarea y select, pero para los tipos checkbox
       // el valor no se recoge en "e.target.value" sino que se recoge en "e.target.checked", por
       // lo cual hay que utilizar el operador ternario..
       // [e.target.name]: e.target.value,
-      [e.target.name]:
-        e.target.type === "checkbox" ? e.target.checked : e.target.value,
+
+      // [e.target.name]:
+      //  e.target.type === "checkbox" ? e.target.checked : e.target.value,
+
+      // Después de la desestructuración queda así...
+      [name]: type === "checkbox" ? checked : value,
     });
   };
 
@@ -72,7 +83,8 @@ const Controlado = () => {
         placeholder="Ingrese Todo"
         className="form-control mb-2"
         name="title"
-        value={todo.title}
+        //value={todo.title}
+        value={title} // después de la desestructuración
         // podemos optimizar mucho más el código usando una función que manipule todos los onChange
         // creamos una función handleChange ... y es importante el name que es el que nos dice
         // dentro de la función onChange desde donde viene el datos...
@@ -83,7 +95,8 @@ const Controlado = () => {
         className="form-control mb-2"
         placeholder="Ingrese descripción"
         name="description"
-        value={todo.description}
+        //value={todo.description}
+        value={description} // después de la desestructuración
         // onChange={(e) => setTodo({ ...todo, description: e.target.value })}
         onChange={handleChange}
       />
@@ -95,7 +108,8 @@ const Controlado = () => {
           // este "id" es para relacionar este input con el label mediante la propiedad htmlFor
           id="inputCheck"
           // para el checkbox no se usa el campo value, sino el campo checked
-          checked={todo.priority}
+          //checked={todo.priority}
+          checked={priority} // después de la desestructuración
           //onChange={(e) => setTodo({ ...todo, priority: e.target.checked })}
           // ahora vamos a reutilizar la linea anterior utilizando el handleChange
           // como en el código de todos los otros elementos.
@@ -106,7 +120,8 @@ const Controlado = () => {
       <select
         className="form-select mb-2"
         name="state"
-        value={todo.state}
+        // value={todo.state}
+        value={todo.state} // después de la desestructuración
         // onChange={(e) => setTodo({ ...todo, state: e.target.value })}
         onChange={handleChange}
       >
