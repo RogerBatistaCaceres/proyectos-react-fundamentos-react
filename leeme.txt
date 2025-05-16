@@ -44,7 +44,8 @@ npm run dev // para poner a correr el servidor
  lo vamos a hacer desde la web netlify: https://www.netlify.com/
 Está página nos ofrece una capa gratuita para probar (hacer despliegue) de nuestra aplicación 
 Este es el dominio de nuestra aplicación
-https://stupendous-pothos-9a6e44.netlify.app/
+
+https://formularios-todos.netlify.app/
 
 
  
